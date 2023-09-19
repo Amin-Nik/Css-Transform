@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.rows {
+    width: 80%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.container {
+    margin: 0 1rem;
+    background-color: #fff;
+    width: 15%;
+    height: 100%;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(34, 139, 34, 0.8);
+    transition: linear 0.3s;
+}
+
+.container div:not(.box) {
+    width: 90px;
+    height: 90px;
+    background-color: lightslategray;
+}
+
+#container> :nth-child(1)> :nth-child(1) .box:hover {
+    transform: rotate(45deg);
+}
+
+#container> :nth-child(1)> :nth-child(2) .box:hover {
+    transform: scale(1, 0.7);
+}
+
+#container> :nth-child(1)> :nth-child(3) .box:hover {
+    transform: scale(0.7, 1);
+}
+
+#container> :nth-child(1)> :nth-child(4) .box:hover {
+    transform: scale(2);
+}
+
+#container> :nth-child(1)> :nth-child(5) .box:hover {
+    transform: scale(2, 1);
+}
+
+#container> :nth-child(2)> :nth-child(5) .box:hover {
+    transform: translate(2.5rem, 0)
+}
+
+#container> :nth-child(2)> :nth-child(4) .box:hover {
+    transform: translate(2.5rem, 1rem)
+}
+
+#container> :nth-child(2)> :nth-child(3) .box:hover {
+    transform: skew(0, 45deg)
+}
+
+#container> :nth-child(2)> :nth-child(2) .box:hover {
+    transform: skew(45deg, 0)
+}
+
+#container> :nth-child(2)> :nth-child(1) .box:hover {
+    transform: scale(1, 2);
+}
+
+#container> :nth-child(3)> :nth-child(1) .box:hover {
+    transform: translate(0, 2.5rem)
+}
+
+#container> :nth-child(3)> :nth-child(2) .box:hover {
+    transform-origin: left;
+    transform: skew(0, 45deg) scale(2) translate(0, -3rem);
+}
+
+#container> :nth-child(4)> :nth-child(2) .box:hover {
+    transform: perspective(100px) rotateY(45deg)
+}
+
+#container> :nth-child(4)> :nth-child(1) .box:hover {
+    transform: perspective(100px) rotateX(45deg)
+}
+
+#container> :nth-child(5)> :nth-child(1) .box:hover {
+    transform-origin: right top;
+    transform: rotate(45deg);
+}
+
+#container> :nth-child(5)> :nth-child(2) .box:hover {
+    transform-origin: left bottom;
+    transform: rotate(45deg);
+}
+
+#container> :nth-child(5)> :nth-child(3) .box:hover {
+    transform-origin: bottom;
+    transform: perspective(100px) rotateX(20deg);
+}
+
+#container> :nth-child(5)> :nth-child(4) .box:hover {
+    transform-origin: top;
+    transform: perspective(200px) rotateX(60deg);
+}
+
+#container> :nth-child(5)> :nth-child(5) .box:hover {
+    transform-origin: left;
+    transform: perspective(200px) rotateY(35deg);
+}
+
+#container> :nth-child(6)> :nth-child(5) .box:hover {
+    transform-origin: left;
+    transform: scale(2, 1)
+}
+
+#container> :nth-child(6)> :nth-child(4) .box:hover {
+    transform-origin: right;
+    transform: scale(2, 1)
+}
+
+#container> :nth-child(6)> :nth-child(3) .box:hover {
+    transform-origin: bottom left;
+    transform: scale(2)
+}
+
+#container> :nth-child(6)> :nth-child(2) .box:hover {
+    transform-origin: top right;
+    transform: scale(2)
+}
+
+#container> :nth-child(6)> :nth-child(1) .box:hover {
+    transform-origin: right;
+    transform: perspective(200px) rotateY(58deg);
+}
+
+#container> :nth-child(7)> :nth-child(1) .box:hover {
+    transform-origin: top;
+    transform: scale(1, 2)
+}
+
+#container> :nth-child(7)> :nth-child(2) .box:hover {
+    transform-origin: bottom;
+    transform: scale(1, 2)
+}
